@@ -7,6 +7,6 @@ pip install -r 'requirments.txt'
 if [ $ENV = 'DEV' ]; then
     echo "Running DevVersion ..."
     exec python identidock.py
-else;
+else
     echo "Running UnitTest version ..."
     exec python test.py
