@@ -4,6 +4,8 @@ import hashlib
 import redis
 import html
 
+
+dnmonster = 'http://monster.apps.console.uzcloud.uz/'
 app = Flask(__name__)
 cache = redis.StrictRedis(host='redis', port=6379, db=0)
 salt = "UNIQUE_SALT"
@@ -39,7 +41,7 @@ def get_identicon(name):
     image = cache.get(name)
     if image is None:
         print ("Cache miss", flush=True)
-        r = requests.get('http://dnmonster:8080/monster/' + name + '?size=80')
+        r = requests.get(dnmonster+'/monster/' + name + '?size=80')
         image = r.content
         cache.set(name, image)
 
