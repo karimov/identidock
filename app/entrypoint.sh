@@ -10,3 +10,4 @@ if [ $ENV = 'DEV' ]; then
 else
     echo "Running UnitTest version ..."
     exec python test.py
+fi
