@@ -9,5 +9,5 @@ if [ $ENV = 'DEV' ]; then
     exec python identidock.py
 else
     echo "Running UnitTest version ..."
-    exec python test.py
+    exec python tests.py
 fi
