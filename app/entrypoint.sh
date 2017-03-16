@@ -2,9 +2,9 @@
 
 set -e
 
-exec pip install -r 'requirments.txt'
+pip install -r 'requirments.txt'
 
-if [$ENV = 'DEV']; then
+if [ $ENV = 'DEV' ]; then
     echo "Running DevVersion ..."
     exec python identidock.py
 else;
